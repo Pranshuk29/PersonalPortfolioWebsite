@@ -4,8 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Personal Website</title>
+  <title>Pranshu Kaushik - Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <style>
+    .header {
+      background:rgba(0, 0, 0, 0.5);
+      display: flex;
+      padding-left: 80px;
+      /* padding: 40px; */
+      border-radius: 20px;
+      align-items: center;
+      /* margin-bottom: 20px; */
+      height: auto;
+    }
+    .header-text {
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: white;
+      margin-right: 20px;
+    }
+
+    .header-text h3 strong{
+      color: rgb(77, 191, 236);
+      font-size: 20px;
+      float: none;
+      margin-left: 0;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .header-text h1 strong{
+
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 10px;
+    }
+
+
+    .header-image {
+      margin-top: 0;
+      padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 400px; /* Adjusted to auto */
+    /* max-height: 300px; Set a max-height to control the size */
+    margin-bottom: 0; 
+    }
+
+    .details {
+      color: rgb(127, 179, 199); 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;  
+    text-align: center;
+    padding-top: 0%;
+    padding: 20px; /* Adjust padding to create space */
+    margin: 0 ; /* Center align the details */
+    /* width: 100%; Optional: Adjust width for better layout */
+    background-image:radial-gradient(closest-side at 55%,rgba(112, 48, 240, 0.4), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) );
+    /* background: rgba(9, 8, 70, 0.5);  */
+    border-radius: 20px; /* Match the header border-radius */
+    padding-left: 200px;
+    }
+  </style>
+
 </head>
 
 
@@ -24,25 +89,22 @@
 
   <section class="home" id="home">
     <header class="header">
-    <h3><strong>Hello, I'm</strong> </h3>
-    <h1><strong>Pranshu <br> Kaushik</strong></h1>
-    <p><strong><br><br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Pre Final Year Undergraduate, IIT Gandhinagar <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AI/ML Enthusiast <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Finance Buff</strong></p>
-    <!-- <img src="me_1_-removebg-preview.png" alt="My Photo"></img> -->
+      <div class="header-text">
+        <h3><strong>Hello, I'm</strong></h3>
+        <h1><strong>Pranshu <br> Kaushik</strong></h1>
+      </div>
+      <img src="me_1_-removebg-preview.png" alt="Your Image" class="header-image">
     </header>
-
+    <div class="details">
+      <p><strong>Pre Final Year Undergraduate, IIT Gandhinagar <br> AI/ML Enthusiast <br> Finance Buff</strong></p>
+    </div>
   </section>
 
+
   
 
   
-<!-- Optional: some overlay text to describe the video
-<div class="content">
-    <h1>Heading</h1>
-    <p>Lorem ipsum...</p>
-    <!-- Use a button to pause/play the video with JavaScript -->
-    <!-- <button id="myBtn" onclick="myFunction()">Pause</button> -->
-  </div>
-  -->
+
 
 
   <!-- <section class="about" id="about">
@@ -74,7 +136,7 @@
       </div>
     </div>
     <h4><b>Firm Believer </b></h4>
-    <h3><b>अंतः अस्ति प्रारंभः</b></h3>
+    <h5><b>अंतः अस्ति प्रारंभः</b></h5>
   </section>
 
   <section class="experiences" id="experiences">
@@ -82,37 +144,176 @@
     <div class="experiences-info">
       <div class="experiences-box box1">
         <h3>AI/ML Internship at <a href="https://nexusinfo.in/" target="_blank" style="text-decoration: none; color: inherit;">Nexus Info</a></h3>
-        <p>Hands-on experience: Gained practical knowledge in software development and AI applications through 3 projects completed during a 1-month internship.<br><br>
-          Skill development: Enhanced my expertise in AI, machine learning, and software development through assigned tasks, project work, and participation in a coding competition.</p>
+        <p>Gained practical knowledge in software development and AI applications through 3 projects completed during a 1-month internship.<br><br>
+          Enhanced my expertise in AI, machine learning, and software development through assigned tasks, project work, and participation in a coding competition.</p>
       </div>
       <div class="experiences-box box2">
         <h3>Amazon ML Summer School '24</h3>
-        <p>Deep dive into ML: This immersive program provided a comprehensive understanding of core machine learning concepts and their practical applications.<br><br>
-          Advanced knowledge: Gained in-depth knowledge of key areas like Supervised Learning, Deep Neural Networks, Large Language Models (LLMs), and Unsupervised Learning.<br><br>
-          Expert guidance: Interactive sessions with experienced Amazon scientists offered valuable insights and industry expertise.</p>
+        <p>This immersive program provided a comprehensive understanding of core machine learning concepts and their practical applications.<br><br>
+          Gained in-depth knowledge of key areas like Supervised Learning, Deep Neural Networks, Large Language Models (LLMs), and Unsupervised Learning.<br><br>
+          Interactive sessions with experienced Amazon scientists offered valuable insights and industry expertise.</p>
       </div>
       </div>
   </section>
+
 
   <section class="skills" id="skills">
     <h2><b>Skills</b></h2>
-    <ul>
-      <li>AI</li>
-      <li>ML</li>
-      <li>Finance</li>
-      <!-- <li> (Add more skills as needed) </li> -->
-    </ul>
+    <div class="skills-info">
+      <div class="skills-box box1">
+        <h3>Languages & Frameworks</h3> 
+        <p>Python, C++, JavaScript, HTML, CSS, Arduino, SQL</p>
+      </div>
+
+      <div class="skills-box box2">
+        <h3>Tools</h3>
+        <p>Autodesk Inventor, MATLAB, Cantera, Polymath, Ansys, Git, TensorFlow, Numpy, Pandas, tkinter, PyTorch, MySQL</p>
+      </div>
+      
+      <div class="skills-box box3">  
+        <h3>Key Courses & Concepts</h3>
+        <p>Amazon ML Summer School ‘24; Introduction to DSA; Supervised Machine Learning: Regression and Classification; Advanced Learning Algorithms- Neural Networks and Decision Trees;  Unsupervised Learning, Recommenders, Reinforcement Learning; Large Language Models(LLMs); Business Anlysis and Process Management; Probability, Statistics and Data Visualization; Partial and Ordinary Differential Equations</p>
+    </div>
+    </div>
   </section>
+
 
   <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <p></p>
+    <h2><b>Projects</b></h2>
+    <div class="projects-info">
+      <div class="projects-box box1">
+        <h3>Credit Score Classification</h3> 
+        <p>ML model for credit score classification using Python, scikit-learn, Pandas, Numpy, PyTorch.<br>
+          <br>Employed with various classification algorithms, including Decision Trees, Logistic Regression, Gradient Boosting, Random Forest etc.<br>
+          <br>Data pre-processing techniques (feature engineering, scaling, one-hot encoding) implemented within.
+          </p>
+          
+      </div>
+
+      <div class="projects-box box2">
+        <h3>Time Series Analysis and Forecasting</h3>
+        <p>Time series concepts in finance, including data visualization, stationarity analysis, and forecasting.
+          <br><br>Construction ARIMA models to forecast future values in financial time series data. Extended models to Seasonal ARIMA (SARIMA) and SARIMAX.
+          
+          </p>
+      </div>
+      
+      <div class="projects-box box3">  
+        <h3>Personal Portolio Website</h3>
+        <p>Ppersonal portfolio website using HTML, CSS, and JavaScript.
+          <br><br>Responsive design principles to ensure optimal viewing experience across various devices. 
+          <br><br>CSS to design a visually appealing and user-friendly interface, Incorporated JavaScript for interactive elements.
+          </p>
+    </div>
+
+      <div class="projects-box box4">
+        <h3>Mathematical Modelling of Damped Vibrations</h3> 
+        <p>Performed under the guidance of Prof. Akshaa Vatwani. Modeled viscous damping in mechanical systems and analyzed behavior under various conditions.
+          <br><br>Implemented numerical methods (Euler's Method, Runge-Kutta) to solve motion equations and visualize vibration decay using Python.
+          </p>
+      </div>
+
+      <div class="projects-box box5">
+        <h3>Milkochill Efficiency Enhancement</h3>
+        <p>Performed under the guidance of Prof. Kabeer Jasuja & Prof. Biswajit Saha. Development and testing of novel Phase Change Materials (PCMs) to optimize Milkochill(a milk chilling machine) charging time.
+          Designed modifications to prevent ice formation around coolant pipes.
+          <br><br>Comprehensive  literature review-research papers and concept-based blogs.
+          </p>
+      </div>
+      
+      <div class="projects-box box6">  
+        <h3>PRO-CHAT Chatting Software Prototype</h3>
+        <p>Secure and user-friendly chat application using Python's Tkinter library with functionalities like user signup, login, password reset, and contact management.
+          <br><br>Has basic widgets (calendar, calculator, clock). Makes use of data file handling and Python dictionaries for user data storage and retrieval.
+          </p>
+    </div>
+    </div>
   </section>
 
-  <section class="contact" id="contact">
+
+  <!-- <section class="contact" id="contact">
+    <h2><b>Contact</b></h2>
+    <div class="skills-info">
+      <div class="skills-box box1">
+        <h3>Languages & Frameworks</h3> 
+        <p>Python, C++, JavaScript, HTML, CSS, Arduino, SQL</p>
+      </div>
+
+      <div class="skills-box box2">
+        <h3>Tools</h3>
+        <p>Autodesk Inventor, MATLAB, Cantera, Polymath, Ansys, Git, TensorFlow, Numpy, Pandas, tkinter, PyTorch, MySQL</p>
+      </div>
+      
+      <div class="skills-box box3">  
+        <h3>Key Courses & Concepts</h3>
+        <p>Amazon ML Summer School ‘24; Introduction to DSA; Supervised Machine Learning: Regression and Classification; Advanced Learning Algorithms- Neural Networks and Decision Trees;  Unsupervised Learning, Recommenders, Reinforcement Learning; Large Language Models(LLMs); Business Anlysis and Process Management; Probability, Statistics and Data Visualization; Partial and Ordinary Differential Equations</p>
+    </div>
+    </div>
+  </section>
+-->
+
+
+
+
+
+<section id="contact" class="contact-section">
+  
+  <div class="contact-info">
+    <h2>Contact</h2>
+    <!-- <p>Connect with me at:</p> -->
+    <ul class="contact-details">
+      <!-- <li><i class="fas fa-phone"></i> +415-832-2000</li> -->
+      <li>
+        <a href="mailto:p29ranshu@gmail.com" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/pranshu-kaushik-9a4785258/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Pranshuk29?tab=repositories" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/_.pranshu_kaushik._/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <form action="https://formspree.io/f/xkgwopbr" method="post" class="contact-form">
+    <h3>Reach Out To Me Directly!</h3>
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+
+  <!-- <section class="contact" id="contact">
     <h2>Contact</h2>
     <p>email, social media links etc.</p>
-  </section>
+  </section> -->
 
   <video autoplay muted loop class="bg-video">
     <source src="3163534-uhd_3840_2160_30fps.mp4" type="video/mp4">
@@ -127,3 +328,5 @@
 
 
 </html>
+
+
