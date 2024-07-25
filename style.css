@@ -75,6 +75,25 @@ body, html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.about h5{
+  color: white;
+  margin-top: 0;
+  padding-top: 2px;
+  font-size: 20px;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about h4{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 20px;
+  font-size: 10px;
+  color:rgb(71, 183, 228,0.6);
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .about-info, .experiences-info, .skills-info{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -91,7 +110,7 @@ body, html {
 
 .about-box, .experiences-box, .skills-box, .projects-box {
     background: linear-gradient(#1f0c53, rgb(68, 10, 185, 0.4));
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
     position: relative;
@@ -223,12 +242,15 @@ body, html {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
     z-index: 1;
+    font-size: 18px; /* Reduced font size */
+
 }
 .about-box p, .experiences-box p, .skills-box p, .projects-box p {
     color:rgb(167, 198, 226);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
     z-index: 1;
+    font-size: 14px;
 }
 
 
