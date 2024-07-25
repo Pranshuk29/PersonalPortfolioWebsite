@@ -1,11 +1,11 @@
 body, html {
-    scroll-behavior: smooth; /*makes scrolling smooth*/
-
+    scroll-behavior: smooth; /* makes scrolling smooth */
     height: 100%;
     font-family: sans-serif;
-  }
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
 
-  
 .bg-video {
     position: fixed;
     top: 0;
@@ -14,639 +14,245 @@ body, html {
     height: 100%;
     object-fit: cover;
     z-index: -1; /* Ensures the video stays in the background */
-  }
+}
 
-
-
-
-/* Add some content at the bottom of the video/page */
 .content {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
-  }
-
+}
 
 .nav {
-  background: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(8, 17, 66, 0.9), rgba(126, 142, 235, 0.5) );
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  padding: 10px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
-  /* margin-left: 20px; */
-  right: 0;
-  position: fixed; /* This line freezes the navbar */
-  /* top: 0; This positions it at the top of the screen */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(8, 17, 66, 0.9), rgba(126, 142, 235, 0.5));
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1%;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .nav li {
-  display: inline-block;
-  margin-right: 25px;
+    margin-right: 25px;
 }
 
 .nav a {
-  text-decoration: none;
-  color: whitesmoke;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: small;
-  
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
 }
 
-.nav a:hover{
-  color: whitesmoke;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(126, 142, 235, 0.5) );
-  border: none;
-  border-radius: 20%;
-  /* background-color: rgba(171, 204, 204, 0.884); Optional background hover color */
-  /* Other hover styles... */
-
+.nav a:hover {
+    color: whitesmoke;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(126, 142, 235, 0.5));
+    border: none;
+    border-radius: 20%;
 }
 
-
-
-/* .header {
-  background:rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 20px;
- 
-  height: 100vh;
+.header, .about, .experiences, .skills, .projects, .contact-section {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
 }
 
-
-.header h3 strong{
-
+.header h1, .header h3, .header p,
+.about h2, .experiences h2, .skills h2, .projects h2, .contact-section h2 {
     color: rgb(77, 191, 236);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    float: none;
-    margin-left: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
-
-  }
-
-.header h1 strong{
-
-  color: white;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 70px;
-  float: none;
-  margin-left: 0;
-  margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.header p strong{
-    color: rgb(127, 179, 199); 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-  
+.about-info, .experiences-info, .skills-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.projects-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Three columns of equal width */
+    grid-template-rows: repeat(2, auto);    /* Two rows with automatic height */
+    grid-gap: 20px; /* Spacing between boxes */
+
+}
+
+.about-box, .experiences-box, .skills-box, .projects-box {
+    background: linear-gradient(#1f0c53, rgb(68, 10, 185, 0.4));
+    padding: 20px;
+    border-radius: 5px;
     text-align: center;
-    padding-left: 100px;
-    margin-left: 100px;
-
-  } */
-
- 
-
-
-.about, .experiences, .skills, .projects, .contact {
-  background:rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 20px;
-
-  height: 100vh;
-
-  padding: 20px;
-  /* color: white; */
+    position: relative;
+    overflow: hidden;
 }
 
-.about h2{
-  color: rgb(77, 191, 236);
-  /* text-shadow: 2px 2px rgb(255, 255, 255,0.3); */
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 40px;
-  margin-bottom: 10px;
-  padding-bottom: 50px;
+.about-box::after, .experiences-box::after, .skills-box::after, .projects-box::after {
+    content: "";
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* below are to create boxes */
-.about-info {
-  padding-left: 80px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  /* Adjust grid-template-columns for desired number of columns and minimum width */
-  grid-gap: 30px; /* Spacing between boxes */
-}
-
-.about-box {
-  background-color: #1f0c53; /* Optional background color */
-  background: linear-gradient( #1f0c53, rgb(68, 10, 185,0.4) );
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-  width: 220px;
-  height: 220px;
-  text-align: center;
-  /* aspect-ratio: 6/4; Makes the boxes square */
-  position: relative; /* Ensure positioning context for the hover effect */
-  overflow: hidden; /* Hide any overflow of the image */
-}
-
-.about-box::after {
-  content: "";
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
 
 .about-box.box1:hover::after {
-  background-image: url("images-14-largejpg.jpg");/* Image for box 1 */
-  opacity: 0.4;
+    background-image: url("images-14-largejpg.jpg");/* Image for box 1 */
+    opacity: 0.4;
+    
+  }
   
-}
-
-.about-box.box2:hover::after {
-  background-image: url("1687249614phpYOSklz.jpeg"); /* Image for box 2 */
-  opacity: 0.4;
-}
-
-.about-box.box3:hover::after {
-  background-image: url("1638992906.jpg"); /* Image for box 3 */
-  opacity: 0.4;
-}
-
-.about-box h3{
-  color:white;
-  text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 20%;
-  padding-top: 0;
-  font-size: 15px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
-
-.about-box p{
-  padding-top: 5px;
-  text-align: center;
-  font-size: 12px;
-  color:rgb(167, 198, 226);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
-
-
-.about h5{
-  color: white;
-  margin-top: 0;
-  padding-top: 2px;
-  font-size: 20px;
-  text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.about h4{
-  margin-bottom: 0;
-  padding-bottom: 0;
-  padding-top: 20px;
-  font-size: 10px;
-  color:rgb(71, 183, 228,0.6);
-  text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-/* .about-box:hover {
-  background-image: url("me_1_-removebg-preview.png");
-  /* background-blend-mode: multiply; Adjust blend mode as needed */
-  /* opacity: 0.8; Adjust opacity for image visibility */
-  */
-
-
-
-
-
-
-
-.experiences{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.experiences h2{
-  color: rgb(77, 191, 236);
-  /* text-shadow: 2px 2px rgb(255, 255, 255,0.3); */
-  font-size: 40px;
-  margin-bottom: 10px;
-  padding-bottom: 50px;
-}
-
-
-.experiences-info {
-  padding-left: 120px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  /* Adjust grid-template-columns for desired number of columns and minimum width */
-  grid-gap: 30px; /* Spacing between boxes */
-}
-
-.experiences-box {
-  background-color: #1f0c53; /* Optional background color */
-  background: linear-gradient( #1f0c53, rgb(68, 10, 185,0.4) );
-  padding-top: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-  width: 250px;
-  height: 250px;
-  text-align: center;
-  /* aspect-ratio: 6/4; Makes the boxes square */
-  position: relative; /* Ensure positioning context for the hover effect */
-  overflow: hidden; /* Hide any overflow of the image */
-}
-
-.experiences-box::after {
-  content: "";
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
+  .about-box.box2:hover::after {
+    background-image: url("1687249614phpYOSklz.jpeg"); /* Image for box 2 */
+    opacity: 0.4;
+  }
+  
+  .about-box.box3:hover::after {
+    background-image: url("1638992906.jpg"); /* Image for box 3 */
+    opacity: 0.4;
+  }
 
 .experiences-box.box1:hover::after {
-  background-image: url("nexus_software_pvt_ltd_logo.jpeg");/* Image for box 1 */
-  opacity: 0.4;
+    background-image: url("nexus_software_pvt_ltd_logo.jpeg");/* Image for box 1 */
+    opacity: 0.4;
+    
+  }
   
-}
-
-.experiences-box.box2:hover::after {
-  background-image: url("free-amazon-45-461766.webp"); /* Image for box 2 */
-  opacity: 0.4;
-}
-
-/* .experiences h3{
-  margin-top: 0;
-  padding-top: 2px;
-  font-size: 15px;
-  text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-} */
-
-/* .experiences h4{
-  margin-bottom: 0;
-  padding-bottom: 0;
-  font-size: 10px;
-  color:rgb(71, 183, 228);
-  text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-} */
-
-
-.experiences-box h3 {
-  color: white;
-  text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 20%;
-  padding-top: 20px;
-  font-size: 15px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
-
-
-.experiences-box p{
-  padding-top: 5px;
-  text-align:center;
-  font-size: 12px;
-  color:rgb(167, 198, 226);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
+  .experiences-box.box2:hover::after {
+    background-image: url("free-amazon-45-461766.webp"); /* Image for box 2 */
+    opacity: 0.4;
+  }
+  
 
 
 
-.skills{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.skills h2{
-  color: rgb(77, 191, 236);
-  /* text-shadow: 2px 2px rgb(255, 255, 255,0.3); */
-  font-size: 40px;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-}
-
-/* below are to create boxes */
-.skills-info {
-  padding-left: 80px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  /* Adjust grid-template-columns for desired number of columns and minimum width */
-  grid-gap: 30px; /* Spacing between boxes */
-}
-
-.skills-box {
-  background-color: #1f0c53; /* Optional background color */
-  background: linear-gradient( #1f0c53, rgb(68, 10, 185,0.4) );
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-  width: 220px;
-  height: 230px;
-  text-align: center;
-  /* aspect-ratio: 6/4; Makes the boxes square */
-  position: relative; /* Ensure positioning context for the hover effect */
-  overflow: hidden; /* Hide any overflow of the image */
-}
-
-.skills-box::after {
-  content: "";
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
 
 .skills-box.box1:hover::after {
-  background-image: url("Python-Logo.png");/* Image for box 1 */
-  background-size: contain;
-  opacity: 0.4;
+    background-image: url("Python-Logo.png");/* Image for box 1 */
+    background-size: contain;
+    opacity: 0.4;
+    
+  }
   
-}
-
-.skills-box.box1:hover:after {  /* Additional pseudo-class for image sequence */
-  animation: image-sequence 4s linear forwards infinite; /* Adjust animation duration */
-}
-
-@keyframes image-sequence {
-  0% { background-image: url("Python-Logo.png"); }
-  15% { background-image: url("c++.png"); }
-  30% { background-image: url("js.png"); }
-  45% { background-image: url("sql.png"); }
-  60% { background-image: url("html.png"); }
-  75% { background-image: url("arduino.jpg"); }
-  90% { background-image: url("css.png"); }
-  /* Add more keyframes for additional images */
-}
-
-.skills-box.box2:hover::after {
-  background-image: url("tool.avif"); /* Image for box 2 */
-  opacity: 0.4;
-}
-
-.skills-box.box3:hover::after {
-  background-image: url("1638992906.jpg"); /* Image for box 3 */
-  opacity: 0.4;
-}
-
-.skills-box h3{
-  color:white;
-  text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 20%;
-  padding-top: 0;
-  font-size: 15px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
-
-.skills-box p{
-  padding-top: 5px;
-  text-align: center;
-  font-size: 12px;
-  color:rgb(167, 198, 226);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
-
-
-.projects{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.projects h2{
-  color: rgb(77, 191, 236);
-  /* text-shadow: 2px 2px rgb(255, 255, 255,0.3); */
-  font-size: 40px;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-}
-
-/* below are to create boxes */
-.projects-info {
-  padding-left: 80px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* Three columns of equal width */
-  grid-template-rows: repeat(2, auto);    /* Two rows with automatic height */
-  grid-gap: 20px; /* Spacing between boxes */
-}
-
-.projects-box {
-  background-color: #1f0c53; /* Optional background color */
-  background: linear-gradient( #1f0c53, rgb(68, 10, 185,0.4) );
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-  width: 240px;
-  height: 170px;
-  text-align: center;
-  /* aspect-ratio: 6/4; Makes the boxes square */
-  position: relative; /* Ensure positioning context for the hover effect */
-  overflow: hidden; /* Hide any overflow of the image */
-}
-
-
-
-.projects-box::after {
-  content: "";
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-.projects-box.box1:hover::after {
-  background-image: url("credit_score.jpeg");/* Image for box 1 */
-  opacity: 0.4;
+  .skills-box.box1:hover:after {  /* Additional pseudo-class for image sequence */
+    animation: image-sequence 4s linear forwards infinite; /* Adjust animation duration */
+  }
   
-}
-
-
-.projects-box.box2:hover::after {
-  background-image: url("time_series.webp"); /* Image for box 2 */
-  opacity: 0.4;
-}
-
-.projects-box.box3:hover::after {
-  background-image: url("me_1_-removebg-preview.png"); /* Image for box 3 */
-  opacity: 0.4;
-}
-
-.projects-box.box4:hover::after {
-  background-image: url("damped.jpg");/* Image for box 1 */
-  background-size: contain;
-  opacity: 0.4;
+  @keyframes image-sequence {
+    0% { background-image: url("Python-Logo.png"); }
+    15% { background-image: url("c++.png"); }
+    30% { background-image: url("js.png"); }
+    45% { background-image: url("sql.png"); }
+    60% { background-image: url("html.png"); }
+    75% { background-image: url("arduino.jpg"); }
+    90% { background-image: url("css.png"); }
+    /* Add more keyframes for additional images */
+  }
   
+  .skills-box.box2:hover::after {
+    background-image: url("tool.avif"); /* Image for box 2 */
+    opacity: 0.4;
+  }
+  
+  .skills-box.box3:hover::after {
+    background-image: url("1638992906.jpg"); /* Image for box 3 */
+    opacity: 0.4;
+  }
+
+
+  .projects-box.box1:hover::after {
+    background-image: url("credit_score.jpeg");/* Image for box 1 */
+    opacity: 0.4;
+    
+  }
+  
+  
+  .projects-box.box2:hover::after {
+    background-image: url("time_series.webp"); /* Image for box 2 */
+    opacity: 0.4;
+  }
+  
+  .projects-box.box3:hover::after {
+    background-image: url("me_1_-removebg-preview.png"); /* Image for box 3 */
+    opacity: 0.4;
+  }
+  
+  .projects-box.box4:hover::after {
+    background-image: url("damped.jpg");/* Image for box 1 */
+    background-size: contain;
+    opacity: 0.4;
+    
+  }
+  
+  
+  .projects-box.box5:hover::after {
+    background-image: url("milkochill.webp"); /* Image for box 2 */
+    opacity: 0.4;
+  }
+  
+  .projects-box.box6:hover::after {
+    background-image: url("prochat.png"); /* Image for box 3 */
+    opacity: 0.4;
+  }
+
+
+
+
+
+
+
+
+.about-box h3, .experiences-box h3, .skills-box h3, .projects-box h3{
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+.about-box p, .experiences-box p, .skills-box p, .projects-box p {
+    color:rgb(167, 198, 226);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
 }
 
 
-.projects-box.box5:hover::after {
-  background-image: url("milkochill.webp"); /* Image for box 2 */
-  opacity: 0.4;
-}
-
-.projects-box.box6:hover::after {
-  background-image: url("prochat.png"); /* Image for box 3 */
-  opacity: 0.4;
-}
-.projects-box h3{
-  color:white;
-  text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 20%;
-  padding-top: 0;
-  font-size: 15px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
-
-.projects-box p{
-  padding-top: 5px;
-  text-align: center;
-  font-size: 10px;
-  color:rgb(167, 198, 226);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: relative; /* Ensure text is above the hover image */
-  z-index: 1; /* Ensure text is above the hover image */
-}
-
-
-/* .header-image {
-  margin-top: 10px;
-  margin-left: 50px;
-  width: 300px; /* Adjust the width as needed */
-  /* height: auto; */
 
 
 
-/* Font Awesome icons (You'll need to include Font Awesome in your project) */
+
+
 
 
 
 /* Font Awesome icons (You'll need to include Font Awesome in your project) */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 
-.contact-section {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  flex-direction: row;
-}
 
 
-.contact-section h2 {
-  /* color: rgb(77, 191, 236);
-  /* text-shadow: 2px 2px rgb(255, 255, 255,0.3); */
-  /* font-size: 40px;
-  margin-left: 120px;
-  padding-left: 40px;
-  margin-bottom: 10px;  */
-  /* padding-bottom: 20px; */
-  color: rgb(77, 191, 236);
-  font-size: 40px;
-  margin-bottom: 20px;
 
-}
 
-.contact-details {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 20px 0;
-  padding: 0;
-}
-
-.contact-details li {
-  list-style: none;
-}
-
-.contact-details li a {
-  color: rgb(177, 226, 245);
-  text-decoration: none;
-  font-size: 2em;
-
-}
-
-.contact-details li a:hover {
-  color: rgb(129, 214, 248);
-}
 
 .contact-info {
   /* flex-basis: 40%; */
   margin-right: 20px;
   text-align: center;
 }
-
-/* .contact-info h2 {
-  margin-bottom: 10px;
-} */
-
-
 
 .contact-form {
   background: linear-gradient(#2c1e53, rgb(19, 2, 53));
@@ -660,14 +266,11 @@ body, html {
 }
 
 .contact-form h3 {
+    text-align: center;
   margin-bottom: 15px;
   color: rgb(129, 214, 248);
 }
 
-/* .contact-info p {
-  margin-top: 20px;
-  padding-left: 20px;
-} */
 
 .form-group {
   margin-bottom: 15px;
@@ -713,6 +316,32 @@ body, html {
 
 
 
+.contact-details {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0;
+  }
+  
+  .contact-details li {
+    list-style: none;
+  }
+  
+  .contact-details li a {
+    color: rgb(177, 226, 245);
+    text-decoration: none;
+    font-size: 2em;
+  
+  }
+  
+  .contact-details li a:hover {
+    color: rgb(129, 214, 248);
+  }
+
+
+
 
 
 
@@ -722,4 +351,78 @@ body, html {
   padding: 10px;
   text-align: center;
   color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav {
+        padding: 20px;
+    }
+
+    .header, .about, .experiences, .skills, .projects, .contact-section {
+        margin: 10px;
+    }
+
+    .header h1, .header h3, .header p,
+    .about h2, .experiences h2, .skills h2, .projects h2, .contact-section h2 {
+        font-size: 1.5em;
+    }
+
+    .about-info, .experiences-info, .skills-info, .projects-info {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box, .experiences-box, .skills-box, .projects-box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-info, .experiences-info, .skills-info, .projects-info {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
