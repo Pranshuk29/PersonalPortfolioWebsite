@@ -69,6 +69,30 @@
     border-radius: 20px; /* Match the header border-radius */
     padding-left: 200px;
     }
+
+    .thank-you-message {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      display: none;
+      color: #ffffffd5;
+      background-color: #000000;
+      /* border-color: #c3e6cb; */
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 20px;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
   </style>
 
 </head>
@@ -101,7 +125,7 @@
   </section>
 
 
-  
+ 
 
   
 
@@ -257,7 +281,7 @@
 
 
 <section id="contact" class="contact-section">
-    <form action="https://formspree.io/f/xkgwopbr" method="post" class="contact-form">
+    <form id="contactForm" action="https://formspree.io/f/xkgwopbr" method="post" class="contact-form">
         <h3>Drop Me A Message!</h3>
         <div class="form-group">
           <label for="name">Full Name:</label>
@@ -277,7 +301,38 @@
         </div>
         <button type="submit">Send Message</button>
       </form>
+      <div class="thank-you-message" id="thankYouMessage">
+        Thank you for your message. I will get back to you soon!
+      </div>
 
+
+<!-- Add the script here -->
+<!-- <script src="scripts.js"></script> -->
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch('https://formspree.io/f/xkgwopbr', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        document.getElementById('thankYouMessage').style.display = 'block'; // Show thank you message
+        form.reset(); // Reset the form
+      } else {
+        alert('There was an error sending your message. Please try again.');
+      }
+    }).catch(error => {
+      alert('There was an error sending your message. Please try again.');
+    });
+  });
+</script>
 
 
 
@@ -311,6 +366,7 @@
 
 
 </section>
+
 
 
 
